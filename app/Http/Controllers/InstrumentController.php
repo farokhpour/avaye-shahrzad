@@ -3,19 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Models\Instrument;
+use App\Repository\InstrumentRepositoryInterface;
 use Illuminate\Http\Request;
 
 class InstrumentController extends Controller
 {
+    private $instrumentRepository;
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(InstrumentRepositoryInterface $instrumentRepository)
+    {
+        $this->instrumentRepository = $instrumentRepository;
+    }
     public function index()
     {
-        //
+        return $this->instrumentRepository->all(['*']);
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -25,7 +32,8 @@ class InstrumentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $instrument = $this->instrumentRepository->create($request->all());
+        return $instrument;
     }
 
     /**
@@ -36,7 +44,7 @@ class InstrumentController extends Controller
      */
     public function show(Instrument $instrument)
     {
-        //
+        return $this->instrumentRepository->findById($instrument->id); 
     }
 
     /**
@@ -48,7 +56,7 @@ class InstrumentController extends Controller
      */
     public function update(Request $request, Instrument $instrument)
     {
-        //
+        return $this->instrumentRepository->update($instrument->id,$request->all());
     }
 
     /**
@@ -59,6 +67,6 @@ class InstrumentController extends Controller
      */
     public function destroy(Instrument $instrument)
     {
-        //
+        return $this->instrumentRepository->deleteById($instrument->id);
     }
 }
