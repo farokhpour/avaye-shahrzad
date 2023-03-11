@@ -2,7 +2,6 @@
 
 namespace App\Repository\Implement;
 
-use App\Models\User;
 use App\Repository\BaseRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
@@ -76,5 +75,4 @@ class BaseRepository implements BaseRepositoryInterface{
     {
         return $this->findById($modelId)->delete();
     }
-   
 }

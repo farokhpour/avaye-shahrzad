@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Instructor;
+use App\Repository\InstructorRepositoryInterface;
 use Illuminate\Http\Request;
 
 class InstructorController extends Controller
 {
+    private $instructorRepository;
+
+    public function __construct(InstructorRepositoryInterface $instructorRepository)
+    {
+        $this->instructorRepository = $instructorRepository;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,7 @@ class InstructorController extends Controller
      */
     public function index()
     {
-        //
+        return $this->instructorRepository->all(['*'],['user']);
     }
 
     /**
@@ -25,7 +32,8 @@ class InstructorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $instructor = $this->instructorRepository->createUserable($request->all());
+        return $instructor;
     }
 
     /**
@@ -36,7 +44,7 @@ class InstructorController extends Controller
      */
     public function show(Instructor $instructor)
     {
-        //
+        return $this->instructorRepository->findById($instructor->id,['*'] ,['user']);
     }
 
     /**
@@ -48,7 +56,8 @@ class InstructorController extends Controller
      */
     public function update(Request $request, Instructor $instructor)
     {
-        //
+        $instructor = $this->instructorRepository->updateUserable($instructor->id,$request->all());
+        return $instructor;
     }
 
     /**
@@ -59,6 +68,6 @@ class InstructorController extends Controller
      */
     public function destroy(Instructor $instructor)
     {
-        //
+        return $this->instructorRepository->deleteUserable($instructor->id);
     }
 }

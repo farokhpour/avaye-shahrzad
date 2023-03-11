@@ -20,7 +20,7 @@ class InstrumentController extends Controller
     }
     public function index()
     {
-        return $this->instrumentRepository->all(['*']);
+        return $this->instrumentRepository->all(['*'],['instructors']);
     }
 
 
@@ -33,6 +33,7 @@ class InstrumentController extends Controller
     public function store(Request $request)
     {
         $instrument = $this->instrumentRepository->create($request->all());
+        $instrument->instructors()->sync($request->instructors);
         return $instrument;
     }
 
@@ -44,7 +45,7 @@ class InstrumentController extends Controller
      */
     public function show(Instrument $instrument)
     {
-        return $this->instrumentRepository->findById($instrument->id); 
+        return $this->instrumentRepository->findById($instrument->id,['*'],['instructors']); 
     }
 
     /**
@@ -56,7 +57,9 @@ class InstrumentController extends Controller
      */
     public function update(Request $request, Instrument $instrument)
     {
-        return $this->instrumentRepository->update($instrument->id,$request->all());
+        $res = $this->instrumentRepository->update($instrument->id,$request->all());
+        $instrument->instructors()->sync($request->instructors);
+        return $res;
     }
 
     /**

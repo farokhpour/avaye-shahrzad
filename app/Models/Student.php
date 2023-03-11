@@ -10,6 +10,7 @@ class Student extends Model
     use HasFactory;
 
     protected $fillable = [
+        'name',
         'father_name',
         'birth_date',
         'birth_place',
@@ -20,4 +21,8 @@ class Student extends Model
         'mobile_number',
         'address',
     ];
+
+    public function user(){
+        return $this->morphOne(User::class, 'userable');
+    }
 }

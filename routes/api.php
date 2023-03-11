@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\InstrumentController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +23,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('employee',EmployeeController::class)->except([
+    'create',
+    'edit'
+]);
+
+Route::resource('student',StudentController::class)->except([
+    'create',
+    'edit'
+]);
+
+Route::resource('instructor',InstructorController::class)->except([
     'create',
     'edit'
 ]);
