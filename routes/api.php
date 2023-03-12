@@ -3,6 +3,7 @@
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\InstrumentController;
+use App\Http\Controllers\LessonController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +39,11 @@ Route::resource('instructor',InstructorController::class)->except([
 ]);
 
 Route::resource('instrument',InstrumentController::class)->except([
+    'create',
+    'edit'
+]);
+
+Route::resource('lesson',LessonController::class)->except([
     'create',
     'edit'
 ]);

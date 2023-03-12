@@ -1,0 +1,875 @@
+{
+	"info": {
+		"_postman_id": "fcb3ada1-7b39-4f8a-9757-223b09a0f577",
+		"name": "avaye shahrzad",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Employee Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mj",
+									"type": "default"
+								},
+								{
+									"key": "userable",
+									"value": "true",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "mj23",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/employee",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "ame khanoom2131",
+									"type": "default"
+								},
+								{
+									"key": "userable",
+									"value": "true",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12313123",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/employee/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employee",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/employee",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/employee/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employee",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/employee/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employee",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Student Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "رضا گیتاریست",
+									"type": "default"
+								},
+								{
+									"key": "father_name",
+									"value": "علی اکبر",
+									"type": "default"
+								},
+								{
+									"key": "birth_date",
+									"value": "1993-09-23",
+									"type": "default"
+								},
+								{
+									"key": "birth_place",
+									"value": "کرج",
+									"type": "default"
+								},
+								{
+									"key": "education",
+									"value": "بی سواد",
+									"type": "default"
+								},
+								{
+									"key": "job",
+									"value": "بیکار",
+									"type": "default"
+								},
+								{
+									"key": "marriage_status",
+									"value": "single",
+									"type": "default"
+								},
+								{
+									"key": "phone_number",
+									"value": "021213123",
+									"type": "default"
+								},
+								{
+									"key": "mobile_number",
+									"value": "091231231",
+									"type": "default"
+								},
+								{
+									"key": "address",
+									"value": "تساینتابشمنستیابنتسبنتاشبینتابه- -سشیبعهاشسابنتس یب-سبسشینبتشاسنیتب",
+									"type": "default"
+								},
+								{
+									"key": "userable",
+									"value": "true",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "gholamreza",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12381720938",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/student",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "عمه لیلا",
+									"type": "text"
+								},
+								{
+									"key": "father_name",
+									"value": "علی اکبر",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "1993-09-23",
+									"type": "text"
+								},
+								{
+									"key": "birth_place",
+									"value": "کرج",
+									"type": "text"
+								},
+								{
+									"key": "education",
+									"value": "بی سواد",
+									"type": "text"
+								},
+								{
+									"key": "job",
+									"value": "بیکار",
+									"type": "text"
+								},
+								{
+									"key": "marriage_status",
+									"value": "single",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "021213123",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "091231231",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "تساینتابشمنستیابنتسبنتاشبینتابه- -سشیبعهاشسابنتس یب-سبسشینبتشاسنیتب",
+									"type": "text"
+								},
+								{
+									"key": "userable",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "gholamreza",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12381720938",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/student/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"student",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/student",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/student/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/student/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Instrument",
+			"item": [
+				{
+					"name": "Instrument Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/instrument",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instrument"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instrument Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "علیگیتور",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "لورم ایپسوم",
+									"type": "default"
+								},
+								{
+									"key": "instructors[]",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "instructors[]",
+									"value": "3",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/instrument",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instrument"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instrument Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "ممد علی",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "للللکححج",
+									"type": "default"
+								},
+								{
+									"key": "instructors[]",
+									"value": "2",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/instrument/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instrument",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instrument Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/instrument/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instrument",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instrument Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/instrument/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instrument",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Instructor",
+			"item": [
+				{
+					"name": "Instructor Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/instructor",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instructor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instructor Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "reza faaal",
+									"type": "default"
+								},
+								{
+									"key": "mobile_number",
+									"value": "09133333333333",
+									"type": "default"
+								},
+								{
+									"key": "phone_number",
+									"value": "055",
+									"type": "default"
+								},
+								{
+									"key": "userable",
+									"value": "true",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "faaal",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/instructor",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instructor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instructor Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "مجتبی علینژاد",
+									"type": "default"
+								},
+								{
+									"key": "phone_number",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "mobile_number",
+									"value": "0912111111111",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/instructor/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instructor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instructor Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/instructor/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instructor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instructor Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/instructor/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instructor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lesson",
+			"item": [
+				{
+					"name": "Lesson Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/lesson",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lesson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lesson Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "student_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "instrument_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "instructor_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "class_date",
+									"value": "2023-03-12",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "pending",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/lesson",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lesson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lesson Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "student_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "instrument_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "instructor_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "class_date",
+									"value": "2023-03-12",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "done",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/lesson/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lesson",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lesson Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/lesson/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lesson",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lesson Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/lesson/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lesson",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

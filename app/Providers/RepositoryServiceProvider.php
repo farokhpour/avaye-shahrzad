@@ -8,14 +8,15 @@ use App\Repository\UserRepositoryInterface;
 use App\Repository\InstructorRepositoryInterface;
 use App\Repository\InstrumentRepositoryInterface;
 use App\Repository\StudentRepositoryInterface;
+use App\Repository\LessonRepositoryInterface;
 
 use App\Repository\Implement\BaseRepository;
 use App\Repository\Implement\EmployeeRepository;
 use App\Repository\Implement\InstructorRepository;
 use App\Repository\Implement\InstrumentRepository;
+use App\Repository\Implement\LessonRepository;
 use App\Repository\Implement\StudentRepository;
 use App\Repository\Implement\UserRepository;
-
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -33,6 +34,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(InstrumentRepositoryInterface::class, InstrumentRepository::class);
         $this->app->bind(InstructorRepositoryInterface::class, InstructorRepository::class);
         $this->app->bind(StudentRepositoryInterface::class, StudentRepository::class);
+        $this->app->bind(LessonRepositoryInterface::class, LessonRepository::class);
     }
 
     /**
